@@ -44,6 +44,8 @@ function isEmailValidate(email)
 
 
 
+
+
 form.addEventListener('submit', function(e){
 
     e.preventDefault();
