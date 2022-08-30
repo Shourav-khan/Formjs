@@ -1,0 +1,104 @@
+ *{
+     box-sizing: border-box;
+ }
+
+ body{
+     background-color: aliceblue;
+     font-family: "Sofia", sans-serif;
+     align-self: center;
+     justify-content: center;
+     display: flex;
+    
+    
+ }
+
+ .container{
+
+    background-color: khaki;
+    margin-top: 12px;
+    border-radius: 5px;
+    width: 420px;
+    height: 600px;
+    box-shadow: 2px 10px 10px rgb(0, 0, 0.8);
+ }
+
+ h2{
+     text-align: center;
+     margin: 20px 0 30px; 
+     color: coral;
+ }
+
+ .form{
+
+
+  padding: 40px 30px;
+    
+ }
+
+ .form-control {
+
+    margin-top: 5px;
+    padding-top: 5px;
+    position: relative;
+ }
+
+ .form-control label{
+     color:darkslategrey;
+     display: block;
+     font-weight: bold;
+     font-size: small;
+    
+ }
+
+ .form-control input {
+     border-radius: 5px;
+     border: 2px solid whitesmoke;
+     width: 100%;
+     padding: 5px;
+     font-size: 18px;
+ }
+
+ .form-control input {
+    font-family: "Sofia", sans-serif;
+ }
+
+
+ .form-control input:focus{
+     outline: 0;
+     border-color: darkorange;
+ }
+
+ .form-control.success input {
+     border-color: green;
+ }
+
+ .form-control.error input {
+    border-color: red;
+    display: block;
+
+}
+
+.form-control small {
+    color: red;
+    position: absolute;
+    bottom: 3px;
+    visibility: hidden;
+    font-size: smaller;
+}
+
+.form-control.error small{
+    visibility: visible;
+}
+
+.form button { 
+    cursor: pointer;
+    width: 100%;
+   background-color: olive;
+   border: 3px solid olive;
+   border-radius: 4px;
+   color: whitesmoke;
+   font-weight: bold;
+   font-size: 15px;
+   padding: 5px;
+   margin-top: 20px;
+}
