@@ -21,10 +21,17 @@ function showSuccess(input){
 
 }
 
-function isEmailValidate(email)
+function checkEmail(input)
 {
         const re = /^((?!\.)[\w\-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$/;
-        return re.test(email);
+        if(re.test(input.value.trim())){
+
+            showSuccess(input);
+            
+        }else{
+            showError(input, 'Email is not valid');
+        }
+        
  }
 
 
@@ -42,6 +49,35 @@ function isEmailValidate(email)
     })
  }
 
+ function checkLength(input, min , max) {
+
+    if(input.value.length < min){
+
+        showError(input,`${input.id} must be at least ${min} characters`);
+    }
+
+    else if(input.value.length > max)
+    {
+
+        showError(input,`${input.id} must be less than ${max} caharacters`);
+    }
+
+    else
+    {
+        showSuccess(input);
+    }
+ }
+
+ 
+ function checkInputMatch(input1, input2)
+ {
+
+    if(input1.value!==input2.value){
+
+        showError(input2, "password not match")
+    }
+ }
+
 
 
 
@@ -51,6 +87,10 @@ form.addEventListener('submit', function(e){
     e.preventDefault();
 
     checkRequired([username,email,password,password2]);
+    checkLength(username, 3,10);
+    checkLength(password, 5, 15);
+    checkEmail(email);
+    checkInputMatch(password, password2);
 
 
 })
